@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* https://animated-gradient-background-generator.netlify.app/ */
+.gradient-background {
+  background: linear-gradient(300deg,#FC840D,#ede5d0,#5E95DA);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.h1 {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size:x-large
+}
+
+.ellipse {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none; 
+    opacity: .6;
+    /* transform: translate(-50%, -50%); */
+    animation: expand 5s ease-in;
+    z-index: -10;
+}
+
+@keyframes expand {
+    0% {
+      scale: 90%;
+    }
+    70% {
+     opacity: .7
+    }
+    100% {
+      translate: 10% -10%;
+      scale: 150%;
+      opacity: 0;
+    }
+  }
